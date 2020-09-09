@@ -4,7 +4,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'fontsource-roboto';
+<<<<<<< HEAD
 //import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+=======
+import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+>>>>>>> first commit
 
 ReactDOM.render(
   <React.StrictMode>
