@@ -1,20 +1,16 @@
 import React from 'react'
+import NewTask from './NewTask'
+import { Switch, Route } from 'react-router-dom'
+import Home from './Home'
 
 const Main = () => (
     <main className="App-main">
-          <section className="col"><h2>Organization</h2>
-          <ul>
-            <li>Primary</li>
-            
-          </ul>
-          </section>
           <section className="col">
-            <h2>Tasks</h2>
-            
+            <Switch>
+                <Route exact path='/' component={Home}/>
+            </Switch>
           </section>
-          <section className="col">
-            <h2>Add New Task</h2>
-          </section>
+          <NewTask />
       </main>
 )
 export default Main
