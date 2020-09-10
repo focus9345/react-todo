@@ -1,8 +1,14 @@
 import React from 'react'
+//import { DateTime } from 'luxon'
 import './NewTask.css';
 
+/*
+use luxon for time date range setting
+will need to change this
+*/
+
 const NewTask = () => (
-    <section className="col">
+    <section className="col add-task">
         <fieldset>
             <legend>Create a new task</legend>
             <div>
@@ -11,7 +17,7 @@ const NewTask = () => (
             </div>
             <div>
                 <label for="taskDueDate">Due Date:</label>
-                <input type="date" id="taskDueDate" min="" max="" value=""></input>
+                <input type="date" id="taskDueDate" min="2020-09-10" max="2020-09-20" value="2020-09-10"></input>
             </div>
             <div>
                 <label for="taskPriority">Priority (5 highest):</label>

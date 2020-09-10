@@ -48,8 +48,21 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-link, a {
+  color: #08D7C7;
+}
+.taskmenu {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+.taskmenu > li {
+  margin: 0 0 0.2em;
+  padding:0;
+}
+.taskmenu > li > a {
+  color: #9AF3EC;
+  text-decoration: none;
 }
 
 .col {
@@ -57,4 +70,10 @@
   color: whitesmoke;
   border:3px solid #111;
   flex-grow: 1;
+}
+.add-task {
+  flex: 30%;
+}
+.task-info {
+  flex: 70%;
 }
