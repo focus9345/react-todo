@@ -53,16 +53,44 @@
 }
 .taskmenu {
   list-style-type: none;
-  margin:0;
+  margin:0.5em 0.2em;
   padding:0;
 }
 .taskmenu > li {
-  margin: 0 0 0.2em;
+  margin: 0 0 0.4em;
   padding:0;
 }
 .taskmenu > li > a {
+  display:inline-block;
   color: #9AF3EC;
+  background: #111;
   text-decoration: none;
+  padding: 0.75em 0.75em 0.75em 1.5em;
+  width:90%;
+  margin:0 auto;
+  text-align:left;
+  border-radius: 0.2em;
+}
+.taskmenu > li > a:hover {
+  color: #FFF;
+  background: #223a50;
+}
+.newTask {
+  padding:1.5em;
+}
+.newTask > a {
+  font-size: 1rem;
+  background: yellow;
+  color:black;
+  border:none;
+  padding: 0.75em 1.75em;
+  text-decoration: none;;
+  font-weight:800;
+  border-radius: 0.4em;
+  margin: 0.2em auto;
+}
+.newTask > a:hover {
+  background: rgb(201, 201, 3);
 }
 
 .col {
@@ -71,9 +99,4 @@
   border:3px solid #111;
   flex-grow: 1;
 }
-.add-task {
-  flex: 30%;
-}
-.task-info {
-  flex: 70%;
-}
+
