@@ -16,7 +16,11 @@
         return JSON.stringify(this.items)
      },
      set: function(newTaskObject) {
+
+
         this.items.push(newTaskObject)
+
+        
         // shows the data in the console
         console.log('api items list: ' + JSON.stringify(this.items))
      }

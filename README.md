@@ -1,5 +1,16 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Simple TODO App Built with React
+
+With this app you can create task with a few options.
+Open a console in chrome using the Inspect tool
+to view the tasks objects.
+
+Mac key short-cut
+`option + command + I`
+
+The app has a few options:
+- add a task
+- view all tasks
+- view task details
 
 ## Available Scripts
 
@@ -67,7 +78,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
-# react-todo
-code-challange
->>>>>>> 628349add65a4f873443009a6ded83e3405cccb2

@@ -12,7 +12,7 @@ class Todo extends Component {
 
         this.state = {
             items: [],
-            messageIs: '',
+            formSubmit: false,
             showDate: new DateTime.local().plus({ days: 1 }).toISODate(),
             twoWeeks: new DateTime.local().plus({ days: 14 }).toISODate()
         };
@@ -21,6 +21,7 @@ class Todo extends Component {
     }
 
     addItem(e) {
+        // works but really need to check each value and build object
         if (this._inputTitleElement.value !== "") {
             var newItem = {
                 type: this._inpuTypeElement.value,
@@ -36,7 +37,7 @@ class Todo extends Component {
                 return {
                     // use concat to avoid mutation
                     items: prevState.items.concat(newItem),
-                    messageIs: 'Task was added'
+                    formSubmit: true
                 };
             });
             TasksAPI.set(newItem);
@@ -59,7 +60,11 @@ class Todo extends Component {
                 <h2> Todo working</h2>
                 <div className="todoListMain">
                     <div className="todoHeader">
-                        {}
+                    {!this.state.formSubmit ? (
+                        <div></div>
+                    ) : (
+                        <div>Data was added sucessfully.</div>
+                    )}
                         <form onSubmit={this.addItem}>
                             <fieldset>
                                 <legend>Create a new task item</legend>
