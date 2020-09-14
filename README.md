@@ -11,6 +11,7 @@ The app has a few options:
 - add a task
 - view all tasks
 - view task details
+- footer show the time
 
 ## Available Scripts
 
