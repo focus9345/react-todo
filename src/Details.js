@@ -46,7 +46,13 @@ const Details = (props) => {
         </div>
         <div className='detail-row'>
             <div className='detail-col detail-key'>Completed:</div>
-            <div className='detail-col detail-value'>{task.completed}</div>
+            <div className='detail-col detail-value'>
+            {!task.completed ? (
+                        <div>No</div>
+                    ) : (
+                        <div>Yes</div>
+                    )}    
+            </div>
         </div>
         <div className='detail-row'>
             <div className='detail-col detail-key'>Description:</div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import TodoItems from "./TodoItems"
 import { Link } from 'react-router-dom'
 import { DateTime } from 'luxon'
 import TasksAPI from './api'
@@ -50,7 +49,7 @@ class Todo extends Component {
         this._inpuTypeElement.value = "";
         this._inputPriorityElement.value = "";
         // as we add items we can see everything in the console
-
+        console.log('Showing itmes from todo.js: ' + JSON.stringify(this.state.items));
         e.preventDefault();
     }
 
@@ -63,8 +62,11 @@ class Todo extends Component {
                     {!this.state.formSubmit ? (
                         <div></div>
                     ) : (
-                        <div>Data was added sucessfully.</div>
+                        <div>A new todo was added sucessfully.</div>
                     )}
+                    <div>
+                    ({ this.state.items.length }) tasks are listed.
+                    </div>
                         <form onSubmit={this.addItem}>
                             <fieldset>
                                 <legend>Create a new task item</legend>
@@ -149,6 +151,9 @@ class Todo extends Component {
                                 </div>
                             </fieldset>
                         </form>
+                        <div>
+                            <small>{this.state.showString}</small>
+                        </div>
 
                         <div className='router-return'>
                             <Link to='/'>Back</Link>

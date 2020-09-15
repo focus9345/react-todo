@@ -1,6 +1,5 @@
 import React from 'react'
 import TasksAPI from './api'
-
 import { Link } from 'react-router-dom'
 
 const Home = () => (
