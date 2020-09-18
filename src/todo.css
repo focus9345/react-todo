@@ -32,6 +32,11 @@ fieldset > div > input {
     flex: 60%;
 }
 
+fieldset > div > input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+
 fieldset > div > textarea {
     background: #222;
     color:#f1f1f1;
