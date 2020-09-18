@@ -2,24 +2,49 @@ import React from 'react'
 import TasksAPI from './api'
 import { Link } from 'react-router-dom'
 
-const Home = () => (
-    
-    <div>
-        <h2>Tasks</h2>
+class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            taskList: TasksAPI.all(),
+        };
+        // This binding is necessary to make `this` work in the callback
+        this.onDeleteItems = this.onDeleteItems.bind(this);
+        
+    }
+    onDeleteItems = (key, e) => {
 
-        <ul className="taskmenu">
-            {
-                TasksAPI.all().map(t => (
-                    <li key={t.key}>
-                        <Link to={`/details/${t.key}`}>{t.text}</Link>
-                    </li>
-                ))
+        TasksAPI.delete(key);
+        this.setState(state => {
+            const taskList = TasksAPI.all();
+            return {
+                taskList,
             }
-        </ul>
-        <div className="newTask">
-            <Link to='/todo'>Add Task</Link>
-        </div> 
-    </div>
-)
+        });
+        e.preventDefault();
+    }
+    
+
+    render() {
+
+        return ( 
+            <div className="displayTasks">
+                <h2>Tasks</h2>
+                <ul className="taskmenu">
+                {
+                    this.state.taskList.map(t => (
+                        <li key={t.key}>
+                            <Link to={`/details/${t.key}`}>{t.text}</Link>
+                            <button onClick={(e) => this.onDeleteItems(t.key, e)}>remove</button>
+                            
+                        </li>
+                    ))
+                }
+                </ul>
+            <div className="newTask"><Link to='/todo'>Add Task</Link></div>
+            </div>
+        );
+    }
+}
 
 export default Home

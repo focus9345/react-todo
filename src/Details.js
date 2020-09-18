@@ -15,7 +15,7 @@ const Details = (props) => {
         parseInt(props.match.params.taskid, 10)
     )
     if(!task) {
-        return <div>No task details were found.</div>
+        return <div>No task details were found. <Link to='/'>Back</Link></div>
     }
     return (
     <div>
