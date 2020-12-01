@@ -59,6 +59,11 @@
 .taskmenu > li {
   margin: 0 0 0.4em;
   padding:0;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 .taskmenu > li > a {
   display:inline-block;
@@ -70,10 +75,23 @@
   margin:0 auto;
   text-align:left;
   border-radius: 0.2em;
+  flex: 80%;
 }
 .taskmenu > li > a:hover {
   color: #FFF;
   background: #223a50;
+}
+.taskmenu > li > button {
+  flex: 20%;
+  background: red;
+  color:#333;
+  border:none;
+  border-radius: 0.2em;
+  font-size:0.9em;
+  font-weight: 600;
+}
+.taskmenu > li > button:hover {
+  background: rgb(199, 4, 4);
 }
 .newTask {
   padding:1.5em;

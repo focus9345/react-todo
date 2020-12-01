@@ -6,7 +6,7 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            taskList: TasksAPI.all(),
+            taskList: TasksAPI.all().map((item) => item),
         };
         // This binding is necessary to make `this` work in the callback
         this.onDeleteItems = this.onDeleteItems.bind(this);
@@ -16,7 +16,7 @@ class Home extends React.Component {
 
         TasksAPI.delete(key);
         this.setState(state => {
-            const taskList = TasksAPI.all();
+            const taskList = TasksAPI.all().map((item) => item);
             return {
                 taskList,
             }
