@@ -4,6 +4,9 @@ With this app you can create task with a few options.
 Open a console in chrome using the Inspect tool
 to view the tasks objects.
 
+## Live Demo
+[Open Demo](https://connor-react-todo.herokuapp.com/)
+
 Mac key short-cut
 `option + command + I`
 
